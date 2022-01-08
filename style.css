@@ -1,0 +1,37 @@
+body
+{
+    background-size: cover;
+}
+.heading_div
+{
+    background-color: orange;
+    color: white;
+    height: 150px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-top: 25px;
+    box-shadow: 10px 10px 15px rgb(52, 55, 49);
+}
+.note
+{
+    font-size: 15px;
+    color: black;
+    margin: 20px;
+}
+.div_song_name
+{
+    text-align: center;
+    margin: 30px;
+}
+#song_name
+{
+    box-shadow: 10px 10px 15px rgb(52, 55, 49);
+}
+canvas
+{
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 20px;
+    box-shadow: 10px 10px 15px rgb(52, 55, 49);
+}
