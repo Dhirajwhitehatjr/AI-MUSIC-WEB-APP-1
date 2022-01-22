@@ -1,7 +1,10 @@
 harry_potter = "";
 peter_pan = "";
-harry_potter = loadSound("music.mp3");
-peter_pan = loadSound("music2.mp3");
+function preload()
+{
+    harry_potter = loadSound("music.mp3");
+    peter_pan = loadSound("music2.mp3");
+}
 function setup()
 {
     canvas = createCanvas(600,400);
