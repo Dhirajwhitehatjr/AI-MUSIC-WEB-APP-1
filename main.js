@@ -5,6 +5,8 @@ leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
 scoreleftWrist = 0;
+harry_potter_status =  "";
+peter_pan_status =  "";
 function preload()
 {
     harry_potter = loadSound("music.mp3");
@@ -22,17 +24,16 @@ function setup()
 function draw()
 {
     image(video,0,0,600,400);
+    harry_potter_status = harry_potter.isPlaying();
+    peter_pan_status = peter_pan.isPlaying();
     fill("red");
     stroke("white");
     if(scoreleftWrist > 0.2){
         circle(leftWrist_x,leftWrist_y,20);
-        Harry_potter_theme_song.stop();
-        if(song_name == false){
-            Peter_pan_song.play();
-        }
-        else{
-            console.log("Song Name: Peter Pan Song");
-            document.getElementById("song_id").innerHTML = "Song Name: Peter Pan Song";
+        peter_pan.stop();
+        if(harry_potter_status == false){
+            harry_potter.play();
+            document.getElementById("song_name").innerHTML = "Playing Harry Potter Song";
         }
     }
 }
