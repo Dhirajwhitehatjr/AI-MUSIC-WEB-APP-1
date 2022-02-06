@@ -5,6 +5,7 @@ leftWristY = 0;
 rightWristX = 0;
 rightWristY = 0;
 scoreleftWrist = 0;
+scorerightWrist = 0;
 harry_potter_status =  "";
 peter_pan_status =  "";
 function preload()
@@ -36,6 +37,14 @@ function draw()
             document.getElementById("song_name").innerHTML = "Playing Harry Potter Song";
         }
     }
+    if(scorerightWrist > 0.2){
+        circle(rightWrist_x,rightWrist_y,20);
+        harry_potter.stop();
+        if(peter_pan_status == false){
+            peter_pan.play();
+            document.getElementById("song_name").innerHTML = "Playing Peter Pan Song";
+        }
+    }
 }
 function modelLoaded()
 {
@@ -52,6 +61,8 @@ function gotposes(results)
         rightWrist_y = results[0].pose.rightWrist.y;
         console.log("rightWrist_x = "+rightWrist_x+"rightWrist_y = "+rightWrist_y);
         scoreleftWrist=results[0].pose.keypoints[9].score;
+        scorerightWrist=results[0].pose.keypoints[10].score;
         console.log(scoreleftWrist);
+        console.log(scorerightWrist);
     }
 }
